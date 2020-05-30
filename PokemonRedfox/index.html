@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lista de Pokemons</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">Sistema de gerenciamento de pokemons</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Lista de Pokemons</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do Pokemon">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Pokedex Number</th>
+							<th>Img Name</th>
+							<th>Generation</th>
+							<th>Evolution Stage</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pokemon">
+						<tr class="pokemon" id="primeiro-pokemon">
+							<td class="info-nome">Bulbasaur</td>
+							<td class="info-Pokedex">1</td>
+							<td class="info-img">1</td>
+							<td class="info-Generation">1</td>
+							<td class="info-Evolution">1</td>
+						</tr>
+
+						<tr class="pokemon" >
+							<td class="info-nome">Ivysaur</td>
+							<td class="info-Pokedex">2</td>
+							<td class="info-img">1</td>
+							<td class="info-Generation">1</td>
+							<td class="info-Evolution">1</td>
+						</tr>
+
+						<tr class="pokemon" >
+							<td class="info-nome">Venusaur</td>
+							<td class="info-Pokedex">3</td>
+							<td class="info-img">3</td>
+							<td class="info-Generation">1</td>
+							<td class="info-Evolution">3</td>
+						</tr>
+
+						<tr class="pokemon">
+							<td class="info-nome">Charmander</td>
+							<td class="info-peso">4</td>
+							<td class="info-altura">4</td>
+							<td class="info-gordura">1</td>
+							<td class="info-imc">1</td>
+						</tr>
+						<tr class="pokemon">
+							<td class="info-nome">Charmeleon</td>
+							<td class="info-Pokedex">5</td>
+							<td class="info-img">5</td>
+							<td class="info-Generation">1</td>
+							<td class="info-Evolution">2</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os pokemons</span>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo Pokemon</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu Pokemon" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="Pokedex">Pokedex Number:</label>
+		            <input id="Pokedex" name="Pokedex" type="text" placeholder="digite a Pokedex do seu Pokemon" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="img">Img Name:</label>
+		            <input id="img" name="img" type="text" placeholder="digite a img do seu Pokemon" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="Generation">Generation</label>
+		            <input id="Generation" type="text" Pokedexlder="digite a Generation do seu Pokemon" class="campo campo-img">
+		        </div>Generation Evolution <button id="adicionar-pokemon" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+		<script src="js/form.js" ></script>
+		<script src="js/remover-pokemon.js" ></script>
+		<script src="js/filtra.js" ></script>
+
+	</body>
+</html>
