@@ -27,10 +27,11 @@ function obtempokemonDoFormulario(form) {
 
     var pokemon = {
         nome: form.nome.value,
-        peso: form.peso.value,
-        altura: form.altura.value,
-        gordura: form.gordura.value,
-        imc: calculaImc(form.peso.value, form.altura.value)
+        Pokedex: form.Pokedex.value,
+        img: form.img.value,
+        Generation: form.Generation.value,
+        info: form.info.value,
+        
     }
 
     return pokemon;
@@ -41,10 +42,11 @@ function montaTr(pokemon) {
     pokemonTr.classList.add("pokemon");
 
     pokemonTr.appendChild(montaTd(pokemon.nome, "info-nome"));
-    pokemonTr.appendChild(montaTd(pokemon.peso, "info-Pokedex"));
-    pokemonTr.appendChild(montaTd(pokemon.altura, "info-img"));
-    pokemonTr.appendChild(montaTd(pokemon.gordura, "info-Generation"));
-    pokemonTr.appendChild(montaTd(pokemon.imc, "info-Evolution"));
+    pokemonTr.appendChild(montaTd(pokemon.Pokedex, "info-Pokedex"));
+    pokemonTr.appendChild(montaTd(pokemon.img, "info-img"));
+    pokemonTr.appendChild(montaTd(pokemon.Generation, "info-Generation"));
+    pokemonTr.appendChild(montaTd(pokemon.info, "info-Evolution"));
+    
 
     return pokemonTr;
 }
